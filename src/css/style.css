@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Rubik:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: pink;
+  font-family: "Epilogue", sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.banner--clients {
+  display: flex;
+  list-style-type: none;
+}/*# sourceMappingURL=style.css.map */
