@@ -18,35 +18,74 @@
   <body>
     <div class="wrapper">
       <nav>
-        <ul class="nav-links">
-          <li class="nav-link">Features</li>
-          <li class="nav-link">Company</li>
-          <li class="nav-link">Careers</li>
-          <li class="nav-link">About</li>
-          <li class="nav-link">Login</li>
-          <li class="nav-link">Register</li>
+        <ul class="nav-row">
+          <li class="nav-row__links">
+            <ul class="nav-row__menu">
+              <li class="nav-logo"><img src="./images/logo.svg" /></li>
+              <li class="nav-link">
+                <ul class="features-link">
+                  <li><a href="#">Features</a></li>
+                  <li class="features-caret">
+                    <a href="#"><img src="./images/icon-arrow-down.svg" /></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-link">
+                <ul class="company-link">
+                  <li><a href="#">Company</a></li>
+                  <li class="company-caret">
+                    <a href="#"><img src="./images/icon-arrow-down.svg" /></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-link"><a href="#">Careers</a></li>
+              <li class="nav-link"><a href="#">About</a></li>
+            </ul>
+          </li>
+          <li class="nav-row__login">
+            <ul class="login-links">
+              <li class="login-link"><a href="#">Login</a></li>
+              <li class="register-link"><a href="#">Register</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <main class="banner">
-        <div class="banner--content">
-          <h1 class="banner--heading">Make remote work</h1>
-          <p class="banner--description">
-            Get your team in sync, no matter your location. Streamline
-            processes, create team rituals, and watch productivity soar.
-          </p>
-          <button class="banner--btn">Learn more</button>
-          <ul class="banner--clients">
-            <li class="client-img">
-              <img src="./images/client-databiz.svg" />
+        <div class="banner__left">
+          <ul class="banner__content">
+            <li class="banner__content-item banner__content-heading">
+              <h1 class="banner__heading"><span>Make</span>remote work</h1>
             </li>
-            <li class="client-img">
-              <img src="./images/client-audiophile.svg" />
+            <li class="banner__content-item">
+              <p class="banner__description">
+                Get your team in sync, no matter your location. Streamline
+                processes, create team rituals, and watch productivity soar.
+              </p>
             </li>
-            <li class="client-img"><img src="./images/client-meet.svg" /></li>
-            <li class="client-img"><img src="./images/client-maker.svg" /></li>
+            <li class="banner__content-item">
+              <button class="banner__btn">Learn more</button>
+            </li>
+            <li class="banner__content-item">
+              <ul class="banner__clients">
+                <li class="client-img">
+                  <img src="./images/client-databiz.svg" />
+                </li>
+                <li class="client-img">
+                  <img src="./images/client-audiophile.svg" />
+                </li>
+                <li class="client-img">
+                  <img src="./images/client-meet.svg" />
+                </li>
+                <li class="client-img">
+                  <img src="./images/client-maker.svg" />
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
-        <div class="banner--img"></div>
+        <div class="banner__right">
+          <img class="banner__img" src="./images/image-hero-desktop.png" />
+        </div>
       </main>
 
       <!-- <div class="attribution">

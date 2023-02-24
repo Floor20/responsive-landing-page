@@ -6,16 +6,195 @@
 }
 
 body {
-  background-color: pink;
+  background-color: hsl(0deg, 0%, 98%);
   font-family: "Epilogue", sans-serif;
 }
 
-.nav-links {
+.wrapper {
+  padding: 2em;
+  height: 100vh;
+}
+
+/* ---------------------------------------------- */
+/* NAVIGATION */
+/* ---------------------------------------------- */
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  color: hsl(0deg, 0%, 41%);
+}
+
+.nav-row__links {
+  display: flex;
+}
+
+.nav-link a {
+  color: hsl(0deg, 0%, 41%);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link a:hover,
+.login-links a:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+
+.nav-logo {
+  margin-right: 4em;
+}
+
+.nav-link:not(:last-child) {
+  margin-right: 3em;
+}
+
+.features-link,
+.company-link {
   display: flex;
   list-style-type: none;
 }
 
-.banner--clients {
+.features-caret,
+.company-caret {
+  margin-left: 10px;
+}
+
+.nav-row__login {
   display: flex;
   list-style-type: none;
+}
+
+.nav-row__menu {
+  display: flex;
+  list-style-type: none;
+  column-gap: 15px;
+}
+
+.login-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.login-links a {
+  color: hsl(0deg, 0%, 41%);
+  text-decoration: none;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.login-links a:hover {
+  border-color: hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 8%);
+}
+
+.register-link {
+  color: hsl(0deg, 0%, 41%);
+  margin-left: 3em;
+}
+
+.register-link a {
+  border: solid 2px hsl(0deg, 0%, 41%);
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.banner {
+  display: flex;
+  max-width: 80%;
+  margin: auto;
+  padding-bottom: 8%;
+}
+
+.banner__left {
+  width: 60%;
+  margin-top: 15%;
+}
+
+.banner__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  list-style-type: none;
+}
+
+.banner__content-item:last-of-type {
+  margin-top: auto;
+}
+
+.banner__heading {
+  font-size: 90px;
+  margin-bottom: 60px;
+}
+
+span {
+  display: block;
+}
+
+.banner__description {
+  color: hsl(0deg, 0%, 41%);
+  font-size: 20px;
+  max-width: 55%;
+  line-height: 1.5;
+  margin-bottom: 60px;
+}
+
+.banner__right {
+  margin-top: 5%;
+  width: 40%;
+}
+
+.banner__img {
+  width: 100%;
+}
+
+.banner__clients {
+  display: flex;
+  justify-content: space-between;
+  max-width: 65%;
+  list-style-type: none;
+}
+
+.banner__btn {
+  background-color: black;
+  color: hsl(0deg, 0%, 98%);
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* ---------------------------------------------- */
+/* QUERIES */
+/* ---------------------------------------------- */
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    padding: 2em 0px;
+  }
+  .banner {
+    flex-direction: column-reverse;
+    max-width: 100%;
+    margin: 0px;
+  }
+  .banner__right,
+.banner__left {
+    width: 100%;
+  }
+  .banner__content {
+    align-items: center;
+  }
+  span {
+    display: inline;
+    margin-right: 10px;
+  }
+  .banner__heading {
+    font-size: 40px;
+  }
+  .banner__description {
+    max-width: 100%;
+    margin: auto;
+  }
+  .nav-row__menu .nav-link,
+.login-links {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
