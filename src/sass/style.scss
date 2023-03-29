@@ -170,6 +170,39 @@ span {
 /* QUERIES */
 /* ---------------------------------------------- */
 
+@media only screen and (max-width: 1380px) {
+  nav {
+    margin-bottom: 20px;
+  }
+
+  .banner {
+    // padding-bottom: 0px;
+  }
+
+  .banner__heading {
+    font-size: 70px;
+  }
+
+  .banner__description {
+    max-width: 65%;
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+
+  .banner__right {
+    margin-top: 12%;
+  }
+
+  .banner__img {
+    height: 600px;
+    width: auto;
+  }
+
+  .banner__clients {
+    max-width: 75%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .wrapper {
     padding: 2em 0px;

@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: hsl(0deg, 0%, 98%);
+  background-color: hsl(0, 0%, 98%);
   font-family: "Epilogue", sans-serif;
 }
 
@@ -22,7 +22,7 @@ body {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-  color: hsl(0deg, 0%, 41%);
+  color: hsl(0, 0%, 41%);
 }
 
 .nav-row__links {
@@ -30,14 +30,14 @@ body {
 }
 
 .nav-link a {
-  color: hsl(0deg, 0%, 41%);
+  color: hsl(0, 0%, 41%);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .nav-link a:hover,
 .login-links a:hover {
-  color: hsl(0deg, 0%, 8%);
+  color: hsl(0, 0%, 8%);
 }
 
 .nav-logo {
@@ -76,23 +76,23 @@ body {
 }
 
 .login-links a {
-  color: hsl(0deg, 0%, 41%);
+  color: hsl(0, 0%, 41%);
   text-decoration: none;
   transition: border-color 0.3s, color 0.3s;
 }
 
 .login-links a:hover {
-  border-color: hsl(0deg, 0%, 8%);
-  color: hsl(0deg, 0%, 8%);
+  border-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 8%);
 }
 
 .register-link {
-  color: hsl(0deg, 0%, 41%);
+  color: hsl(0, 0%, 41%);
   margin-left: 3em;
 }
 
 .register-link a {
-  border: solid 2px hsl(0deg, 0%, 41%);
+  border: solid 2px hsl(0, 0%, 41%);
   border-radius: 10px;
   padding: 10px 20px;
 }
@@ -130,7 +130,7 @@ span {
 }
 
 .banner__description {
-  color: hsl(0deg, 0%, 41%);
+  color: hsl(0, 0%, 41%);
   font-size: 20px;
   max-width: 55%;
   line-height: 1.5;
@@ -155,7 +155,7 @@ span {
 
 .banner__btn {
   background-color: black;
-  color: hsl(0deg, 0%, 98%);
+  color: hsl(0, 0%, 98%);
   padding: 15px 30px;
   border-radius: 12px;
   font-size: 18px;
@@ -166,6 +166,29 @@ span {
 /* ---------------------------------------------- */
 /* QUERIES */
 /* ---------------------------------------------- */
+@media only screen and (max-width: 1380px) {
+  nav {
+    margin-bottom: 20px;
+  }
+  .banner__heading {
+    font-size: 70px;
+  }
+  .banner__description {
+    max-width: 65%;
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+  .banner__right {
+    margin-top: 12%;
+  }
+  .banner__img {
+    height: 600px;
+    width: auto;
+  }
+  .banner__clients {
+    max-width: 75%;
+  }
+}
 @media only screen and (max-width: 600px) {
   .wrapper {
     padding: 2em 0px;
@@ -176,7 +199,7 @@ span {
     margin: 0px;
   }
   .banner__right,
-.banner__left {
+  .banner__left {
     width: 100%;
   }
   .banner__content {
@@ -194,7 +217,7 @@ span {
     margin: auto;
   }
   .nav-row__menu .nav-link,
-.login-links {
+  .login-links {
     display: none;
   }
 }/*# sourceMappingURL=style.css.map */
