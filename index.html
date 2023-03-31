@@ -11,6 +11,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" type="text/css" href="./src/css/style.css" />
+    <script defer src="src/script.js"></script>
 
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
@@ -29,6 +30,45 @@
                     <a href="#"><img src="./images/icon-arrow-down.svg" /></a>
                   </li>
                 </ul>
+                <!-- features dropdown -->
+                <ul class="dropdown-features dropdown">
+                  <li>
+                    <ul class="features-icons">
+                      <li class="todo-icon icon">
+                        <img
+                          src="./images/icon-todo.svg"
+                          alt="To-do list icon"
+                        />
+                      </li>
+                      <li class="calendar-icon icon">
+                        <img
+                          src="./images/icon-calendar.svg"
+                          alt="Calendar icon"
+                        />
+                      </li>
+                      <li class="reminders-icon icon">
+                        <img
+                          src="./images/icon-reminders.svg"
+                          alt="Reminders icon"
+                        />
+                      </li>
+                      <li class="planning-icon icon">
+                        <img
+                          src="./images/icon-planning.svg"
+                          alt="Planning icon"
+                        />
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul class="dropdown-links">
+                      <li class="dropdown-link"><a href="#">Todo List</a></li>
+                      <li class="dropdown-link"><a href="#">Calendar</a></li>
+                      <li class="dropdown-link"><a href="#">Reminders</a></li>
+                      <li class="dropdown-link"><a href="#">Planning</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </li>
               <li class="nav-link">
                 <ul class="company-link">
@@ -36,6 +76,12 @@
                   <li class="company-caret">
                     <a href="#"><img src="./images/icon-arrow-down.svg" /></a>
                   </li>
+                </ul>
+                <!-- company dropdown -->
+                <ul class="dropdown-company dropdown">
+                  <li class="dropdown-link"><a href="#">History</a></li>
+                  <li class="dropdown-link"><a href="#">Our Team</a></li>
+                  <li class="dropdown-link"><a href="#">Blog</a></li>
                 </ul>
               </li>
               <li class="nav-link"><a href="#">Careers</a></li>

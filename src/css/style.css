@@ -29,6 +29,10 @@ body {
   display: flex;
 }
 
+.nav-link {
+  position: relative;
+}
+
 .nav-link a {
   color: hsl(0, 0%, 41%);
   text-decoration: none;
@@ -52,6 +56,63 @@ body {
 .company-link {
   display: flex;
   list-style-type: none;
+}
+
+.dropdown {
+  display: flex;
+  list-style-type: none;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px 15px 10px 20px;
+}
+
+.dropdown-features {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+}
+
+.dropdown-company {
+  display: block;
+  position: absolute;
+  top: 35px;
+  min-width: 130px;
+}
+
+.features-icons {
+  list-style-type: none;
+}
+
+.dropdown-row {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+.dropdown-links {
+  list-style-type: none;
+}
+
+.dropdown-links:nth-child(3) {
+  padding-top: 0px;
+}
+
+.dropdown-link,
+.icon {
+  padding: 10px;
+}
+
+.dropdown-link a:hover {
+  color: hsl(0, 0%, 41%);
+}
+
+.reminders-icon,
+.calendar-icon {
+  padding-top: 5px;
+}
+
+.planning-icon {
+  padding-top: 8px;
 }
 
 .features-caret,
