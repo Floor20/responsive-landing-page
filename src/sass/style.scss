@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-  color: hsl(0, 0%, 41%);
+  height: 35px;
 }
 
 .nav-row__links {
@@ -44,10 +44,6 @@ body {
 .nav-link a:hover,
 .login-links a:hover {
   color: hsl(0, 0%, 8%);
-}
-
-.nav-link--active {
-  // color: pink;
 }
 
 .nav-logo {
@@ -88,11 +84,6 @@ body {
 .features-icons {
   list-style-type: none;
 }
-
-// .icon:nth-last-child(1),
-// .dropdown-link:nth-last-child(1) {
-//   padding-top: 0px;
-// }
 
 .dropdown-row {
   display: flex;
@@ -231,9 +222,29 @@ span {
   padding: 15px 30px;
   border-radius: 12px;
   font-size: 18px;
-  font-weight: 500;
   letter-spacing: 1px;
-  // margin-bottom: 80px;
+  border: 1px solid hsl(0, 0%, 8%);
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.banner__btn:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 8%);
+}
+
+/* -------- JS behavior ------------------------- */
+
+.hidden {
+  display: none;
+}
+
+.link-active {
+  color: hsl(0, 0%, 8%);
+}
+
+.rotate {
+  transform: rotate(-180deg);
 }
 
 /* ---------------------------------------------- */
