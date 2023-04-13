@@ -28,6 +28,8 @@ featuresLink.addEventListener("click", function () {
     featuresDropdown.classList.add("hidden");
     featuresCaret.classList.remove("rotate");
     this.closest(".nav-link").style.paddingBottom = "12px";
+  } else {
+    featuresDropdown.classList.remove("hidden");
   }
 });
 
