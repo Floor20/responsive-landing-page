@@ -309,7 +309,7 @@ figure {
     margin: 0px;
   }
   .banner__left {
-    padding: 0px 30px;
+    padding: 0px 15px;
   }
   .banner__right {
     margin: 50px 0px 30px 0px;
@@ -322,11 +322,11 @@ figure {
     margin-right: 10px;
   }
   .banner__heading {
-    font-size: 30px;
+    font-size: 35px;
     margin-bottom: 30px;
   }
   .banner__description {
-    font-size: 14px;
+    font-size: 16px;
     max-width: 100%;
     margin-bottom: 30px;
   }
