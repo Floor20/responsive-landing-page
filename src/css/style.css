@@ -199,12 +199,17 @@ span {
 }
 
 .banner__right {
-  margin-top: 5%;
+  margin-top: 10%;
   width: 40%;
 }
 
-.banner__img {
+figure {
+  background-image: url("../../images/image-hero-desktop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
+  height: 800px;
 }
 
 .banner__clients {
@@ -244,12 +249,30 @@ span {
   transform: rotate(-180deg);
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+.even-padding {
+  padding-bottom: 0px;
+}
+
 /* ---------------------------------------------- */
 /* QUERIES */
 /* ---------------------------------------------- */
 @media only screen and (max-width: 1380px) {
   nav {
     margin-bottom: 20px;
+  }
+  .banner {
+    padding-bottom: 10%;
+    column-gap: 20px;
   }
   .banner__heading {
     font-size: 70px;
@@ -260,7 +283,8 @@ span {
     margin-bottom: 50px;
   }
   .banner__right {
-    margin-top: 12%;
+    margin-top: 10%;
+    width: 45%;
   }
   .banner__img {
     height: 600px;
@@ -272,7 +296,7 @@ span {
 }
 @media only screen and (max-width: 600px) {
   .wrapper {
-    padding: 2em 0px;
+    padding: 0px 0px 0px 0px;
   }
   .banner {
     flex-direction: column-reverse;
@@ -282,23 +306,132 @@ span {
   .banner__right,
   .banner__left {
     width: 100%;
+    margin: 0px;
+  }
+  .banner__left {
+    padding: 0px 12px;
+  }
+  .banner__right {
+    margin: 30px 0px 10px 0px;
   }
   .banner__content {
-    align-items: center;
+    text-align: center;
   }
   span {
     display: inline;
     margin-right: 10px;
   }
   .banner__heading {
-    font-size: 40px;
+    font-size: 30px;
+    margin-bottom: 30px;
   }
   .banner__description {
+    font-size: 14px;
     max-width: 100%;
-    margin: auto;
+    margin-bottom: 30px;
   }
-  .nav-row__menu .nav-link,
+  .banner__btn {
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-bottom: 60px;
+  }
+  .banner__clients {
+    max-width: 100%;
+  }
+  .client-img img {
+    width: 60px;
+  }
+  .banner__img {
+    height: 300px;
+    width: 100%;
+  }
+  figure {
+    background-image: url("../../images/image-hero-mobile.png");
+  }
+  nav {
+    margin-bottom: 0px;
+    padding: 0px 0px 0px 15px;
+    position: relative;
+  }
+  .nav-row {
+    position: absolute;
+    flex-direction: column;
+    justify-content: start;
+    right: 0px;
+    height: 100vh;
+    padding-top: 0px;
+    background-color: hsl(0, 0%, 100%);
+    width: 60%;
+    z-index: 10;
+  }
+  .nav-row__menu {
+    position: relative;
+    padding-top: 35%;
+  }
+  .nav-logo {
+    position: absolute;
+    top: 0px;
+    padding-top: 15px;
+  }
+  .nav-row__login {
+    justify-content: space-around;
+  }
+  .nav-row__links {
+    justify-content: start;
+  }
+  .nav-link {
+    padding: 12px;
+    font-size: 14px;
+  }
+  .nav-link:not(:last-child) {
+    margin-right: 0px;
+    padding: 12px;
+  }
+  .login-links,
+  .nav-row__menu {
+    flex-direction: column;
+    align-items: start;
+    width: 60%;
+    background-color: hsl(0, 0%, 100%);
+  }
   .login-links {
-    display: none;
+    align-items: center;
+    font-size: 14px;
+  }
+  .login-link {
+    padding: 15px 10px;
+  }
+  .dropdown-features,
+  .dropdown-company {
+    position: static;
+    box-shadow: none;
+    padding-bottom: 0px;
+  }
+  .planning-icon,
+  .reminders-icon,
+  .calendar-icon {
+    padding-top: 4px;
+  }
+  .register-link {
+    margin-top: 15px;
+    margin-left: 0px;
+  }
+  .register-link a {
+    padding: 10px 50px;
+  }
+  .mobile-menu-icon {
+    background-image: url("../../images/icon-menu.svg");
+    width: 30px;
+    height: 25px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 15;
+  }
+  .mobile-menu-icon a {
+    height: 25px;
+    width: 30px;
+    display: inline-block;
   }
 }/*# sourceMappingURL=style.css.map */
