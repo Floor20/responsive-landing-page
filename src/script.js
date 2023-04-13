@@ -55,6 +55,8 @@ companyLink.addEventListener("click", function () {
     companyDropdown.classList.add("hidden");
     companyCaret.classList.remove("rotate");
     this.closest(".nav-link").style.paddingBottom = "12px";
+  } else {
+    companyDropdown.classList.remove("hidden");
   }
 });
 
