@@ -15,12 +15,12 @@ const overlay = document.querySelector(".overlay");
 ////////////////////////////////////////
 // EVENT LISTENERS
 
-featuresLink.addEventListener("mouseenter", function () {
-  featuresDropdown.classList.remove("hidden");
-  featuresCaret.classList.add("rotate");
-  this.querySelector("a").style.color = "hsl(0, 0%, 8%)";
-  this.closest(".nav-link").style.paddingBottom = "0px";
-});
+// featuresLink.addEventListener("mouseenter", function () {
+//   featuresDropdown.classList.remove("hidden");
+//   featuresCaret.classList.add("rotate");
+//   this.querySelector("a").style.color = "hsl(0, 0%, 8%)";
+//   this.closest(".nav-link").style.paddingBottom = "0px";
+// });
 
 featuresLink.addEventListener("click", function () {
   if (featuresDropdown.classList.contains("hidden")) {
@@ -44,21 +44,22 @@ featuresDropdown.addEventListener("mouseleave", function () {
   featuresLink.querySelector("a").style.color = "hsl(0, 0%, 41%)";
 });
 
-companyLink.addEventListener("mouseenter", function () {
-  companyDropdown.classList.remove("hidden");
-  companyCaret.classList.add("rotate");
-  this.closest(".nav-link").style.paddingBottom = "0px";
-  this.querySelector("a").style.color = "hsl(0, 0%, 8%)";
-});
+// companyLink.addEventListener("mouseenter", function () {
+//   companyDropdown.classList.remove("hidden");
+//   companyCaret.classList.add("rotate");
+//   this.closest(".nav-link").style.paddingBottom = "0px";
+//   this.querySelector("a").style.color = "hsl(0, 0%, 8%)";
+// });
 
 companyLink.addEventListener("click", function () {
-  if (!companyDropdown.classList.contains("hidden")) {
+  if (companyDropdown.classList.contains("hidden")) {
+    companyDropdown.classList.remove("hidden");
+    companyCaret.classList.add("rotate");
+    this.closest(".nav-link").style.paddingBottom = "0px";
+  } else {
     companyDropdown.classList.add("hidden");
     companyCaret.classList.remove("rotate");
     this.closest(".nav-link").style.paddingBottom = "12px";
-  } else {
-    companyDropdown.classList.remove("hidden");
-    companyCaret.classList.add("rotate");
   }
 });
 
