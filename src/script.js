@@ -26,10 +26,11 @@ featuresLink.addEventListener("mouseenter", function () {
 featuresLink.addEventListener("click", function () {
   if (!featuresDropdown.classList.contains("hidden")) {
     featuresDropdown.classList.add("hidden");
-    featuresCaret.classList.remove("rotate");
+    featuresCaret.classList.add("rotate");
     this.closest(".nav-link").style.paddingBottom = "12px";
   } else {
     featuresDropdown.classList.remove("hidden");
+    featuresCaret.classList.remove("rotate");
   }
 });
 
@@ -53,10 +54,11 @@ companyLink.addEventListener("mouseenter", function () {
 companyLink.addEventListener("click", function () {
   if (!companyDropdown.classList.contains("hidden")) {
     companyDropdown.classList.add("hidden");
-    companyCaret.classList.remove("rotate");
+    companyCaret.classList.add("rotate");
     this.closest(".nav-link").style.paddingBottom = "12px";
   } else {
     companyDropdown.classList.remove("hidden");
+    companyCaret.classList.remove("rotate");
   }
 });
 
