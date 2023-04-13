@@ -23,6 +23,14 @@ featuresLink.addEventListener("mouseenter", function () {
   this.closest(".nav-link").style.paddingBottom = "0px";
 });
 
+featuresLink.addEventListener("click", function () {
+  if (!featuresDropdown.classList.contains("hidden")) {
+    featuresDropdown.classList.add("hidden");
+    featuresCaret.classList.remove("rotate");
+    this.closest(".nav-link").style.paddingBottom = "12px";
+  }
+});
+
 featuresDropdown.addEventListener("mouseenter", function () {
   featuresLink.querySelector("a").style.color = "hsl(0, 0%, 8%)";
 });
@@ -38,6 +46,14 @@ companyLink.addEventListener("mouseenter", function () {
   companyCaret.classList.add("rotate");
   this.closest(".nav-link").style.paddingBottom = "0px";
   this.querySelector("a").style.color = "hsl(0, 0%, 8%)";
+});
+
+companyLink.addEventListener("click", function () {
+  if (!companyDropdown.classList.contains("hidden")) {
+    companyDropdown.classList.add("hidden");
+    companyCaret.classList.remove("rotate");
+    this.closest(".nav-link").style.paddingBottom = "12px";
+  }
 });
 
 companyDropdown.addEventListener("mouseleave", function () {
