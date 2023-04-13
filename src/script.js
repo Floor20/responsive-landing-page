@@ -19,18 +19,18 @@ featuresLink.addEventListener("mouseenter", function () {
   featuresDropdown.classList.remove("hidden");
   featuresCaret.classList.add("rotate");
   this.querySelector("a").style.color = "hsl(0, 0%, 8%)";
-  console.log(this.closest(".nav-link"));
   this.closest(".nav-link").style.paddingBottom = "0px";
 });
 
 featuresLink.addEventListener("click", function () {
-  if (!featuresDropdown.classList.contains("hidden")) {
+  if (featuresDropdown.classList.contains("hidden")) {
+    featuresDropdown.classList.remove("hidden");
+    featuresCaret.classList.add("rotate");
+    this.closest(".nav-link").style.paddingBottom = "0px";
+  } else {
     featuresDropdown.classList.add("hidden");
     featuresCaret.classList.remove("rotate");
     this.closest(".nav-link").style.paddingBottom = "12px";
-  } else {
-    featuresDropdown.classList.remove("hidden");
-    featuresCaret.classList.add("rotate");
   }
 });
 
