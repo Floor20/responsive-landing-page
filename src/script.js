@@ -54,6 +54,7 @@ featuresLink.addEventListener("click", function () {
 
   if (featuresCaret.classList.contains("rotate"))
     featuresCaret.classList.remove("rotate");
+  else featuresCaret.classList.add("rotate");
 
   if (featuresDropdown.style.display !== "none") {
     featuresDropdown.style.display = "none";
@@ -98,7 +99,9 @@ companyLink.addEventListener("click", function () {
   //   companyCaret.classList.remove("rotate");
   //   this.closest(".nav-link").style.paddingBottom = "12px";
   // }
-  companyCaret.classList.add("rotate");
+  if (companyCaret.classList.contains("rotate"))
+    companyCaret.classList.remove("rotate");
+  else companyCaret.classList.add("rotate");
 
   if (companyDropdown.style.display !== "none") {
     companyDropdown.style.display = "none";
