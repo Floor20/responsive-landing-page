@@ -16,8 +16,21 @@ const banner = document.querySelector(".banner");
 ////////////////////////////////////////
 // EVENT LISTENERS
 
+const showOverlay = function () {
+  if (overlay.classList.contains("hidden")) {
+    navRow.style.display = "flex";
+    overlay.classList.remove("hidden");
+    mobileMenuIcon.style.backgroundImage =
+      "url(../../images/icon-close-menu.svg)";
+  } else {
+    navRow.style.display = "none";
+    overlay.classList.add("hidden");
+    mobileMenuIcon.style.backgroundImage = "url(../../images/icon-menu.svg)";
+  }
+};
+
 featuresLink.addEventListener("mouseenter", function () {
-  featuresDropdown.classList.remove("hidden");
+  // featuresDropdown.classList.remove("hidden");
   featuresCaret.classList.add("rotate");
   this.querySelector("a").style.color = "hsl(0, 0%, 8%)";
 
@@ -39,13 +52,15 @@ featuresLink.addEventListener("click", function () {
   //   this.closest(".nav-link").style.paddingBottom = "12px";
   // }
 
+  if (featuresCaret.classList.contains("rotate"))
+    featuresCaret.classList.remove("rotate");
+
   if (featuresDropdown.style.display !== "none") {
     featuresDropdown.style.display = "none";
-    featuresCaret.classList.remove("rotate");
     this.closest(".nav-link").style.paddingBottom = "12px";
   } else {
     featuresDropdown.style.display = "flex";
-    // featuresCaret.classList.remove("rotate");
+    // featuresCaret.classList.add("rotate");
   }
 });
 
@@ -61,7 +76,7 @@ featuresDropdown.addEventListener("mouseleave", function () {
 });
 
 companyLink.addEventListener("mouseenter", function () {
-  companyDropdown.classList.remove("hidden");
+  // companyDropdown.classList.remove("hidden");
   companyCaret.classList.add("rotate");
   this.closest(".nav-link").style.paddingBottom = "0px";
   this.querySelector("a").style.color = "hsl(0, 0%, 8%)";
@@ -112,28 +127,33 @@ mobileMenuIcon.addEventListener("click", function () {
   //   mobileMenuIcon.style.backgroundImage = "url(../../images/icon-menu.svg)";
   // }
 
-  if (overlay.classList.contains("hidden")) {
-    navRow.style.display = "flex";
-    overlay.classList.remove("hidden");
-    mobileMenuIcon.style.backgroundImage =
-      "url(../../images/icon-close-menu.svg)";
-  } else {
-    navRow.style.display = "none";
-    overlay.classList.add("hidden");
-    mobileMenuIcon.style.backgroundImage = "url(../../images/icon-menu.svg)";
-  }
+  // if (overlay.classList.contains("hidden")) {
+  //   navRow.style.display = "flex";
+  //   overlay.classList.remove("hidden");
+  //   mobileMenuIcon.style.backgroundImage =
+  //     "url(../../images/icon-close-menu.svg)";
+  // } else {
+  //   navRow.style.display = "none";
+  //   overlay.classList.add("hidden");
+  //   mobileMenuIcon.style.backgroundImage = "url(../../images/icon-menu.svg)";
+  // }
+  showOverlay();
 });
 
 navLinks.forEach((link) => {
   link.addEventListener("mouseleave", function () {
     featuresLink.querySelector("a").style.color = "hsl(0, 0%, 41%)";
     companyLink.querySelector("a").style.color = "hsl(0, 0%, 41%)";
-    featuresDropdown.classList.add("hidden");
-    companyDropdown.classList.add("hidden");
+    featuresDropdown.style.display = "none";
+    companyDropdown.style.display = "none";
     featuresCaret.classList.remove("rotate");
     companyCaret.classList.remove("rotate");
     this.style.paddingBottom = "12px";
   });
+});
+
+overlay.addEventListener("click", function () {
+  showOverlay();
 });
 
 if (!featuresDropdown.classList.contains("hidden"))
