@@ -30,15 +30,16 @@ const showOverlay = function () {
 };
 
 featuresLink.addEventListener("mouseover", function (e) {
-  // featuresDropdown.classList.remove("hidden");
+  featuresDropdown.classList.remove("hidden");
   featuresCaret.classList.add("rotate");
   this.querySelector("a").style.color = "hsl(0, 0%, 8%)";
   this.closest(".nav-link").style.paddingBottom = "0px";
+  // featuresDropdown.style.display = "flex";
 
   if (featuresDropdown.style.display !== "none") {
     // this.closest(".nav-link").style.paddingBottom = "0px";
   } else {
-    featuresDropdown.style.display = "flex";
+    // featuresDropdown.style.display = "flex";
     this.closest(".nav-link").style.paddingBottom = "12px";
   }
   console.log(e.currentTarget, e.target);
@@ -88,15 +89,17 @@ featuresDropdown.addEventListener("mouseleave", function () {
 });
 
 companyLink.addEventListener("mouseenter", function () {
-  // companyDropdown.classList.remove("hidden");
+  companyDropdown.classList.remove("hidden");
   companyCaret.classList.add("rotate");
-  this.closest(".nav-link").style.paddingBottom = "0px";
+  // this.closest(".nav-link").style.paddingBottom = "0px";
   this.querySelector("a").style.color = "hsl(0, 0%, 8%)";
+  // companyDropdown.style.display = "flex";
 
   if (companyDropdown.style.display !== "none") {
+    // companyDropdown.style.display = "flex";
     this.closest(".nav-link").style.paddingBottom = "0px";
   } else {
-    companyDropdown.style.display = "flex";
+    // companyDropdown.style.display = "flex";
   }
 });
 
@@ -166,8 +169,10 @@ navLinks.forEach((link) => {
   link.addEventListener("mouseleave", function () {
     featuresLink.querySelector("a").style.color = "hsl(0, 0%, 41%)";
     companyLink.querySelector("a").style.color = "hsl(0, 0%, 41%)";
-    featuresDropdown.style.display = "none";
-    companyDropdown.style.display = "none";
+    // featuresDropdown.style.display = "none";
+    // companyDropdown.style.display = "none";
+    featuresDropdown.classList.add("hidden");
+    companyDropdown.classList.add("hidden");
     featuresCaret.classList.remove("rotate");
     companyCaret.classList.remove("rotate");
     this.style.paddingBottom = "12px";

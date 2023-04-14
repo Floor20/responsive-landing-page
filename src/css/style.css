@@ -136,14 +136,6 @@ nav {
   column-gap: 15px;
 }
 
-.nav-link:hover .dropdown-features,
-.nav-link:hover .dropdown-company {
-  display: flex;
-}
-.nav-link:hover .dropdown-company {
-  flex-direction: column;
-}
-
 .login-links {
   display: flex;
   list-style-type: none;
