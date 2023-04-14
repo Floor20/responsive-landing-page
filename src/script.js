@@ -71,7 +71,7 @@ featuresLink.addEventListener("click", function () {
     featuresCaret.classList.remove("rotate");
     this.closest(".nav-link").style.paddingBottom = "12px";
   } else {
-    // featuresDropdown.style.display = "flex";
+    featuresDropdown.style.display = "flex";
     featuresCaret.classList.add("rotate");
   }
 });
@@ -127,7 +127,7 @@ companyLink.addEventListener("click", function () {
     companyCaret.classList.remove("rotate");
     this.closest(".nav-link").style.paddingBottom = "12px";
   } else {
-    // companyDropdown.style.display = "flex";
+    companyDropdown.style.display = "flex";
     companyCaret.classList.add("rotate");
   }
 });
