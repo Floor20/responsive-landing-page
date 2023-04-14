@@ -54,19 +54,17 @@ featuresLink.addEventListener("click", function () {
   //   featuresCaret.classList.remove("rotate");
   //   this.closest(".nav-link").style.paddingBottom = "12px";
   // }
-
-  if (featuresCaret.classList.contains("rotate"))
-    featuresCaret.classList.remove("rotate");
-  else featuresCaret.classList.add("rotate");
-
-  if (featuresDropdown.style.display !== "none") {
-    featuresDropdown.style.display = "none";
-    this.closest(".nav-link").style.paddingBottom = "12px";
-  } else {
-    featuresDropdown.style.display = "flex";
-    // featuresCaret.classList.add("rotate");
-    this.closest(".nav-link").style.paddingBottom = "0px";
-  }
+  // if (featuresCaret.classList.contains("rotate"))
+  //   featuresCaret.classList.remove("rotate");
+  // else featuresCaret.classList.add("rotate");
+  // if (featuresDropdown.style.display !== "none") {
+  //   featuresDropdown.style.display = "none";
+  //   this.closest(".nav-link").style.paddingBottom = "12px";
+  // } else {
+  //   featuresDropdown.style.display = "flex";
+  //   featuresCaret.classList.add("rotate");
+  //   this.closest(".nav-link").style.paddingBottom = "0px";
+  // }
 });
 
 featuresDropdown.addEventListener("mouseenter", function () {
