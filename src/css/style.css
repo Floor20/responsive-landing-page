@@ -44,11 +44,6 @@ nav {
   transition: color 0.3s;
 }
 
-.nav-link a:hover,
-.login-links a:hover {
-  color: hsl(0, 0%, 8%);
-}
-
 .nav-logo {
   margin-right: 4em;
 }
@@ -105,10 +100,6 @@ nav {
 .dropdown-link,
 .icon {
   padding: 10px;
-}
-
-.dropdown-link a:hover {
-  color: hsl(0, 0%, 41%);
 }
 
 .reminders-icon,
