@@ -147,11 +147,6 @@ nav {
   .dropdown-company {
     flex-direction: column;
   }
-
-  .features-caret,
-  .company-caret {
-    // transform: rotate(-180deg);
-  }
 }
 
 .login-links {
@@ -419,11 +414,6 @@ figure {
     background-color: hsl(0, 0%, 100%);
     width: 60%;
     z-index: 10;
-  }
-
-  .nav-row__links,
-  .nav-row__login {
-    // display: none;
   }
 
   .nav-row__menu {

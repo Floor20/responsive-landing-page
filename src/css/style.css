@@ -143,6 +143,7 @@ nav {
 .nav-link:hover .dropdown-company {
   flex-direction: column;
 }
+
 .login-links {
   display: flex;
   list-style-type: none;
