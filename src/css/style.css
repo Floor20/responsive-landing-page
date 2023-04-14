@@ -18,11 +18,16 @@ body {
 /* ---------------------------------------------- */
 /* NAVIGATION */
 /* ---------------------------------------------- */
+nav {
+  display: flex;
+}
+
 .nav-row {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
   height: 35px;
+  width: 100%;
 }
 
 .nav-row__links {
@@ -131,6 +136,18 @@ body {
   column-gap: 15px;
 }
 
+.nav-link:hover .dropdown-features,
+.nav-link:hover .dropdown-company {
+  display: flex;
+}
+.nav-link:hover .dropdown-company {
+  flex-direction: column;
+}
+.nav-link:hover .features-caret,
+.nav-link:hover .company-caret {
+  transform: rotate(-180deg);
+}
+
 .login-links {
   display: flex;
   list-style-type: none;
@@ -160,6 +177,7 @@ body {
 
 .banner {
   display: flex;
+  flex-direction: row;
   max-width: 80%;
   margin: auto;
   padding-bottom: 8%;
@@ -354,6 +372,7 @@ figure {
     position: relative;
   }
   .nav-row {
+    display: none;
     position: absolute;
     flex-direction: column;
     justify-content: start;
@@ -386,17 +405,6 @@ figure {
   .nav-link:not(:last-child) {
     margin-right: 0px;
     padding: 12px;
-  }
-  .nav-link:hover .dropdown-features,
-  .nav-link:hover .dropdown-company {
-    display: flex;
-  }
-  .nav-link:hover .dropdown-company {
-    flex-direction: column;
-  }
-  .nav-link:hover .features-caret,
-  .nav-link:hover .company-caret {
-    transform: rotate(-180deg);
   }
   .login-links,
   .nav-row__menu {

@@ -20,11 +20,16 @@ body {
 /* NAVIGATION */
 /* ---------------------------------------------- */
 
+nav {
+  display: flex;
+}
+
 .nav-row {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
   height: 35px;
+  width: 100%;
 }
 
 .nav-row__links {
@@ -133,6 +138,22 @@ body {
   column-gap: 15px;
 }
 
+.nav-link:hover {
+  .dropdown-features,
+  .dropdown-company {
+    display: flex;
+  }
+
+  .dropdown-company {
+    flex-direction: column;
+  }
+
+  .features-caret,
+  .company-caret {
+    transform: rotate(-180deg);
+  }
+}
+
 .login-links {
   display: flex;
   list-style-type: none;
@@ -162,6 +183,7 @@ body {
 
 .banner {
   display: flex;
+  flex-direction: row;
   max-width: 80%;
   margin: auto;
   padding-bottom: 8%;
@@ -265,6 +287,12 @@ figure {
 .even-padding {
   padding-bottom: 0px;
 }
+
+// .mobile-menu-icon a {
+//   height: 25px;
+//   width: 30px;
+//   display: inline-block;
+// }
 
 /* ---------------------------------------------- */
 /* QUERIES */
@@ -374,12 +402,14 @@ figure {
   }
 
   nav {
+    // display: none;
     margin-bottom: 0px;
     padding: 0px 0px 0px 15px;
     position: relative;
   }
 
   .nav-row {
+    display: none;
     position: absolute;
     flex-direction: column;
     justify-content: start;
@@ -389,6 +419,11 @@ figure {
     background-color: hsl(0, 0%, 100%);
     width: 60%;
     z-index: 10;
+  }
+
+  .nav-row__links,
+  .nav-row__login {
+    // display: none;
   }
 
   .nav-row__menu {
@@ -418,22 +453,6 @@ figure {
   .nav-link:not(:last-child) {
     margin-right: 0px;
     padding: 12px;
-  }
-
-  .nav-link:hover {
-    .dropdown-features,
-    .dropdown-company {
-      display: flex;
-    }
-
-    .dropdown-company {
-      flex-direction: column;
-    }
-
-    .features-caret,
-    .company-caret {
-      transform: rotate(-180deg);
-    }
   }
 
   .login-links,

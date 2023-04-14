@@ -11,6 +11,7 @@ const companyCaret = document.querySelector(".company-caret");
 const navRow = document.querySelector(".nav-row");
 const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
 const overlay = document.querySelector(".overlay");
+const banner = document.querySelector(".banner");
 
 ////////////////////////////////////////
 // EVENT LISTENERS
@@ -69,13 +70,24 @@ companyDropdown.addEventListener("mouseleave", function () {
 });
 
 mobileMenuIcon.addEventListener("click", function () {
-  if (navRow.classList.contains("hidden")) {
-    navRow.classList.remove("hidden");
+  // if (navRow.classList.contains("hidden")) {
+  //   navRow.classList.remove("hidden");
+  //   overlay.classList.remove("hidden");
+  //   mobileMenuIcon.style.backgroundImage =
+  //     "url(../../images/icon-close-menu.svg)";
+  // } else {
+  //   navRow.classList.add("hidden");
+  //   overlay.classList.add("hidden");
+  //   mobileMenuIcon.style.backgroundImage = "url(../../images/icon-menu.svg)";
+  // }
+
+  if (overlay.classList.contains("hidden")) {
+    navRow.style.display = "flex";
     overlay.classList.remove("hidden");
     mobileMenuIcon.style.backgroundImage =
       "url(../../images/icon-close-menu.svg)";
   } else {
-    navRow.classList.add("hidden");
+    navRow.style.display = "none";
     overlay.classList.add("hidden");
     mobileMenuIcon.style.backgroundImage = "url(../../images/icon-menu.svg)";
   }
@@ -95,3 +107,13 @@ navLinks.forEach((link) => {
 
 if (!featuresDropdown.classList.contains("hidden"))
   navLink.classList.add("even-padding");
+
+// if (window.matchMedia("(min-width: 600px)").matches) {
+//   mobileMenuIcon.classList.add("hidden");
+//   navRow.classList.remove("hidden");
+// }
+
+// if ((navLink.style.fontSize = "14px")) {
+//   navRow.classList.add("hidden");
+//   mobileMenuIcon.classList.remove("hidden");
+// }
