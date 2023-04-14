@@ -420,6 +420,22 @@ figure {
     padding: 12px;
   }
 
+  .nav-link:hover {
+    .dropdown-features,
+    .dropdown-company {
+      display: flex;
+    }
+
+    .dropdown-company {
+      flex-direction: column;
+    }
+
+    .features-caret,
+    .company-caret {
+      transform: rotate(-180deg);
+    }
+  }
+
   .login-links,
   .nav-row__menu {
     flex-direction: column;

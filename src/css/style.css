@@ -387,6 +387,17 @@ figure {
     margin-right: 0px;
     padding: 12px;
   }
+  .nav-link:hover .dropdown-features,
+  .nav-link:hover .dropdown-company {
+    display: flex;
+  }
+  .nav-link:hover .dropdown-company {
+    flex-direction: column;
+  }
+  .nav-link:hover .features-caret,
+  .nav-link:hover .company-caret {
+    transform: rotate(-180deg);
+  }
   .login-links,
   .nav-row__menu {
     flex-direction: column;
