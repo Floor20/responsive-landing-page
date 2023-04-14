@@ -398,13 +398,6 @@ figure {
     padding: 12px;
     font-size: 14px;
   }
-  .nav-link:hover .dropdown-features,
-  .nav-link:hover .dropdown-company {
-    display: flex;
-  }
-  .nav-link:hover .dropdown-company {
-    flex-direction: column;
-  }
   .login-links {
     display: flex;
     list-style-type: none;
