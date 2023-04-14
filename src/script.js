@@ -17,21 +17,35 @@ const banner = document.querySelector(".banner");
 // EVENT LISTENERS
 
 featuresLink.addEventListener("mouseenter", function () {
-  //   featuresDropdown.classList.remove("hidden");
-  //   featuresCaret.classList.add("rotate");
+  featuresDropdown.classList.remove("hidden");
+  featuresCaret.classList.add("rotate");
   this.querySelector("a").style.color = "hsl(0, 0%, 8%)";
-  this.closest(".nav-link").style.paddingBottom = "0px";
+
+  if (featuresDropdown.style.display !== "none") {
+    this.closest(".nav-link").style.paddingBottom = "0px";
+  } else {
+    featuresDropdown.style.display = "flex";
+  }
 });
 
 featuresLink.addEventListener("click", function () {
-  if (featuresDropdown.classList.contains("hidden")) {
-    featuresDropdown.classList.remove("hidden");
-    featuresCaret.classList.add("rotate");
-    this.closest(".nav-link").style.paddingBottom = "0px";
-  } else {
-    featuresDropdown.classList.add("hidden");
+  // if (featuresDropdown.classList.contains("hidden")) {
+  //   featuresDropdown.classList.remove("hidden");
+  //   featuresCaret.classList.add("rotate");
+  //   this.closest(".nav-link").style.paddingBottom = "0px";
+  // } else if (!featuresDropdown.classList.contains("hidden")) {
+  //   featuresDropdown.classList.add("hidden");
+  //   featuresCaret.classList.remove("rotate");
+  //   this.closest(".nav-link").style.paddingBottom = "12px";
+  // }
+
+  if (featuresDropdown.style.display !== "none") {
+    featuresDropdown.style.display = "none";
     featuresCaret.classList.remove("rotate");
     this.closest(".nav-link").style.paddingBottom = "12px";
+  } else {
+    featuresDropdown.style.display = "flex";
+    // featuresCaret.classList.remove("rotate");
   }
 });
 
@@ -41,26 +55,43 @@ featuresDropdown.addEventListener("mouseenter", function () {
 
 featuresDropdown.addEventListener("mouseleave", function () {
   featuresDropdown.classList.add("hidden");
+  // featuresDropdown.style.display = "none";
   featuresCaret.classList.remove("rotate");
   featuresLink.querySelector("a").style.color = "hsl(0, 0%, 41%)";
 });
 
 companyLink.addEventListener("mouseenter", function () {
-  //   companyDropdown.classList.remove("hidden");
-  //   companyCaret.classList.add("rotate");
+  companyDropdown.classList.remove("hidden");
+  companyCaret.classList.add("rotate");
   this.closest(".nav-link").style.paddingBottom = "0px";
   this.querySelector("a").style.color = "hsl(0, 0%, 8%)";
+
+  if (companyDropdown.style.display !== "none") {
+    this.closest(".nav-link").style.paddingBottom = "0px";
+  } else {
+    companyDropdown.style.display = "flex";
+  }
 });
 
 companyLink.addEventListener("click", function () {
-  if (companyDropdown.classList.contains("hidden")) {
-    companyDropdown.classList.remove("hidden");
-    companyCaret.classList.add("rotate");
-    this.closest(".nav-link").style.paddingBottom = "0px";
-  } else {
-    companyDropdown.classList.add("hidden");
+  // if (companyDropdown.classList.contains("hidden")) {
+  //   companyDropdown.classList.remove("hidden");
+  //   companyCaret.classList.add("rotate");
+  //   this.closest(".nav-link").style.paddingBottom = "0px";
+  // } else {
+  //   companyDropdown.classList.add("hidden");
+  //   companyCaret.classList.remove("rotate");
+  //   this.closest(".nav-link").style.paddingBottom = "12px";
+  // }
+  companyCaret.classList.add("rotate");
+
+  if (companyDropdown.style.display !== "none") {
+    companyDropdown.style.display = "none";
     companyCaret.classList.remove("rotate");
     this.closest(".nav-link").style.paddingBottom = "12px";
+  } else {
+    companyDropdown.style.display = "flex";
+    // featuresCaret.classList.remove("rotate");
   }
 });
 

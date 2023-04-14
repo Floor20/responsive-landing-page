@@ -143,11 +143,6 @@ nav {
 .nav-link:hover .dropdown-company {
   flex-direction: column;
 }
-.nav-link:hover .features-caret,
-.nav-link:hover .company-caret {
-  transform: rotate(-180deg);
-}
-
 .login-links {
   display: flex;
   list-style-type: none;
