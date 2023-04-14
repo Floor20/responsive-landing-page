@@ -398,11 +398,11 @@ figure {
     padding: 12px;
     font-size: 14px;
   }
-  .nav-link:focus-within .dropdown-features,
-  .nav-link:focus-within .dropdown-company {
+  .nav-link:visited .dropdown-features,
+  .nav-link:visited .dropdown-company {
     display: flex;
   }
-  .nav-link:focus-within .dropdown-company {
+  .nav-link:visited .dropdown-company {
     flex-direction: column;
   }
   .login-links {
