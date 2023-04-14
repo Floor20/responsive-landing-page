@@ -136,9 +136,6 @@ nav {
   column-gap: 15px;
 }
 
-.nav-link:hover {
-  padding-bottom: 0px;
-}
 .nav-link:hover .dropdown-features,
 .nav-link:hover .dropdown-company {
   display: flex;
@@ -400,9 +397,6 @@ figure {
   .nav-link {
     padding: 12px;
     font-size: 14px;
-  }
-  .nav-link:focus {
-    padding-bottom: 0px;
   }
   .nav-link:focus .dropdown-features,
   .nav-link:focus .dropdown-company {
