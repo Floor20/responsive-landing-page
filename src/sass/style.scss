@@ -57,6 +57,7 @@ nav {
 
 .nav-link:not(:last-child) {
   margin-right: 3em;
+  // padding-bottom: 0px;
 }
 
 .features-link,
@@ -139,6 +140,8 @@ nav {
 }
 
 .nav-link:hover {
+  padding-bottom: 0px;
+
   .dropdown-features,
   .dropdown-company {
     display: flex;
@@ -274,7 +277,7 @@ figure {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 905px;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 5;
 }
@@ -350,7 +353,7 @@ figure {
   }
 
   .banner__right {
-    margin: 70px 0px 30px 0px;
+    margin: 70px 0px 40px 0px;
   }
 
   .banner__content {
@@ -376,7 +379,7 @@ figure {
   .banner__btn {
     font-size: 14px;
     padding: 10px 20px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
   }
 
   .banner__clients {
@@ -388,7 +391,7 @@ figure {
   }
 
   .banner__img {
-    height: 300px;
+    height: 350px;
     width: 100%;
   }
 
@@ -409,7 +412,7 @@ figure {
     flex-direction: column;
     justify-content: start;
     right: 0px;
-    height: 100vh;
+    height: 905px;
     padding-top: 0px;
     background-color: hsl(0, 0%, 100%);
     width: 60%;
@@ -440,9 +443,27 @@ figure {
     font-size: 14px;
   }
 
+  .nav-link:active {
+    padding-bottom: 0px;
+
+    .dropdown-features,
+    .dropdown-company {
+      display: flex;
+    }
+
+    .dropdown-company {
+      flex-direction: column;
+    }
+  }
+
+  .login-links {
+    display: flex;
+    list-style-type: none;
+  }
+
   .nav-link:not(:last-child) {
     margin-right: 0px;
-    padding: 12px;
+    // padding: 12px;
   }
 
   .login-links,

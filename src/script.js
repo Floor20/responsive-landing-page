@@ -29,16 +29,19 @@ const showOverlay = function () {
   }
 };
 
-featuresLink.addEventListener("mouseenter", function () {
+featuresLink.addEventListener("mouseover", function (e) {
   // featuresDropdown.classList.remove("hidden");
   featuresCaret.classList.add("rotate");
   this.querySelector("a").style.color = "hsl(0, 0%, 8%)";
+  this.closest(".nav-link").style.paddingBottom = "0px";
 
   if (featuresDropdown.style.display !== "none") {
-    this.closest(".nav-link").style.paddingBottom = "0px";
+    // this.closest(".nav-link").style.paddingBottom = "0px";
   } else {
     featuresDropdown.style.display = "flex";
+    this.closest(".nav-link").style.paddingBottom = "12px";
   }
+  console.log(e.currentTarget, e.target);
 });
 
 featuresLink.addEventListener("click", function () {
@@ -62,6 +65,7 @@ featuresLink.addEventListener("click", function () {
   } else {
     featuresDropdown.style.display = "flex";
     // featuresCaret.classList.add("rotate");
+    this.closest(".nav-link").style.paddingBottom = "0px";
   }
 });
 
