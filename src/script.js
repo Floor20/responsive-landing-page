@@ -65,6 +65,9 @@ featuresLink.addEventListener("click", function () {
   //   featuresCaret.classList.add("rotate");
   //   this.closest(".nav-link").style.paddingBottom = "0px";
   // }
+
+  if (featuresDropdown.style.display !== "none")
+    featuresDropdown.style.display = "none";
 });
 
 featuresDropdown.addEventListener("mouseenter", function () {
