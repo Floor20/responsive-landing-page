@@ -401,14 +401,14 @@ figure {
     padding: 12px;
     font-size: 14px;
   }
-  .nav-link:active {
+  .nav-link:focus {
     padding-bottom: 0px;
   }
-  .nav-link:active .dropdown-features,
-  .nav-link:active .dropdown-company {
+  .nav-link:focus .dropdown-features,
+  .nav-link:focus .dropdown-company {
     display: flex;
   }
-  .nav-link:active .dropdown-company {
+  .nav-link:focus .dropdown-company {
     flex-direction: column;
   }
   .login-links {

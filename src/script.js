@@ -66,8 +66,14 @@ featuresLink.addEventListener("click", function () {
   //   this.closest(".nav-link").style.paddingBottom = "0px";
   // }
 
-  if (featuresDropdown.style.display !== "none")
+  if (featuresDropdown.style.display !== "none") {
     featuresDropdown.style.display = "none";
+    featuresCaret.classList.remove("rotate");
+    this.closest(".nav-link").style.paddingBottom = "12px";
+  } else {
+    featuresDropdown.style.display = "flex";
+    featuresCaret.classList.add("rotate");
+  }
 });
 
 featuresDropdown.addEventListener("mouseenter", function () {
@@ -104,17 +110,25 @@ companyLink.addEventListener("click", function () {
   //   companyCaret.classList.remove("rotate");
   //   this.closest(".nav-link").style.paddingBottom = "12px";
   // }
-  if (companyCaret.classList.contains("rotate"))
-    companyCaret.classList.remove("rotate");
-  else companyCaret.classList.add("rotate");
+  // if (companyCaret.classList.contains("rotate"))
+  //   companyCaret.classList.remove("rotate");
+  // else companyCaret.classList.add("rotate");
 
+  // if (companyDropdown.style.display !== "none") {
+  //   companyDropdown.style.display = "none";
+  //   companyCaret.classList.remove("rotate");
+  //   this.closest(".nav-link").style.paddingBottom = "12px";
+  // } else {
+  //   companyDropdown.style.display = "flex";
+  //   featuresCaret.classList.remove("rotate");
+  // }
   if (companyDropdown.style.display !== "none") {
     companyDropdown.style.display = "none";
     companyCaret.classList.remove("rotate");
     this.closest(".nav-link").style.paddingBottom = "12px";
   } else {
     companyDropdown.style.display = "flex";
-    // featuresCaret.classList.remove("rotate");
+    companyCaret.classList.add("rotate");
   }
 });
 
