@@ -80,6 +80,7 @@ featuresLink.addEventListener("click", function () {
 // Experimenting w/touch events
 featuresLink.addEventListener("touchstart", function (e) {
   e.preventDefault();
+  this.querySelector("a").style.color = "hsl(0, 0%, 8%)";
 
   if (featuresDropdown.style.display !== "none") {
     featuresDropdown.style.display = "none";
@@ -151,6 +152,7 @@ companyLink.addEventListener("click", function () {
 
 companyLink.addEventListener("touchstart", function (e) {
   e.preventDefault();
+  this.querySelector("a").style.color = "hsl(0, 0%, 8%)";
 
   if (companyDropdown.style.display !== "none") {
     companyDropdown.style.display = "none";
