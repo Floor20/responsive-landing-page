@@ -78,7 +78,9 @@ featuresLink.addEventListener("click", function () {
 });
 
 // Experimenting w/touch events
-featuresLink.addEventListener("touchstart", function () {
+featuresLink.addEventListener("touchstart", function (e) {
+  e.preventDefault();
+
   if (featuresDropdown.style.display !== "none") {
     featuresDropdown.style.display = "none";
     featuresCaret.classList.remove("rotate");
@@ -89,7 +91,9 @@ featuresLink.addEventListener("touchstart", function () {
   }
 });
 
-companyLink.addEventListener("touchstart", function () {
+companyLink.addEventListener("touchstart", function (e) {
+  e.preventDefault();
+
   if (companyDropdown.style.display !== "none") {
     companyDropdown.style.display = "none";
     companyCaret.classList.remove("rotate");
