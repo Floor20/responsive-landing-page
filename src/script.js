@@ -91,19 +91,6 @@ featuresLink.addEventListener("touchstart", function (e) {
   }
 });
 
-companyLink.addEventListener("touchstart", function (e) {
-  e.preventDefault();
-
-  if (companyDropdown.style.display !== "none") {
-    companyDropdown.style.display = "none";
-    companyCaret.classList.remove("rotate");
-    this.closest(".nav-link").style.paddingBottom = "12px";
-  } else {
-    companyDropdown.style.display = "flex";
-    companyCaret.classList.add("rotate");
-  }
-});
-
 featuresDropdown.addEventListener("mouseenter", function () {
   featuresLink.querySelector("a").style.color = "hsl(0, 0%, 8%)";
 });
@@ -152,6 +139,19 @@ companyLink.addEventListener("click", function () {
   //   companyDropdown.style.display = "flex";
   //   featuresCaret.classList.remove("rotate");
   // }
+  if (companyDropdown.style.display !== "none") {
+    companyDropdown.style.display = "none";
+    companyCaret.classList.remove("rotate");
+    this.closest(".nav-link").style.paddingBottom = "12px";
+  } else {
+    companyDropdown.style.display = "flex";
+    companyCaret.classList.add("rotate");
+  }
+});
+
+companyLink.addEventListener("touchstart", function (e) {
+  e.preventDefault();
+
   if (companyDropdown.style.display !== "none") {
     companyDropdown.style.display = "none";
     companyCaret.classList.remove("rotate");
