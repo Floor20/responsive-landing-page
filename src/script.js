@@ -77,6 +77,18 @@ featuresLink.addEventListener("click", function () {
   }
 });
 
+// Experimenting w/touch events
+featuresLink.addEventListener("touchstart", function () {
+  if (featuresDropdown.style.display !== "none") {
+    featuresDropdown.style.display = "none";
+    featuresCaret.classList.remove("rotate");
+    this.closest(".nav-link").style.paddingBottom = "12px";
+  } else {
+    featuresDropdown.style.display = "flex";
+    featuresCaret.classList.add("rotate");
+  }
+});
+
 featuresDropdown.addEventListener("mouseenter", function () {
   featuresLink.querySelector("a").style.color = "hsl(0, 0%, 8%)";
 });
