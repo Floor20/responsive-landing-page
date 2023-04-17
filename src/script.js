@@ -129,6 +129,7 @@ navLinks.forEach((link) => {
   link.addEventListener("mouseleave", function () {
     featuresLink.querySelector("a").style.color = "hsl(0, 0%, 41%)";
     companyLink.querySelector("a").style.color = "hsl(0, 0%, 41%)";
+    companyDropdown.style.display = "none";
     featuresDropdown.classList.add("hidden");
     companyDropdown.classList.add("hidden");
     featuresCaret.classList.remove("rotate");
