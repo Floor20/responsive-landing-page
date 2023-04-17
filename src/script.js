@@ -197,7 +197,7 @@ navLinks.forEach((link) => {
     featuresLink.querySelector("a").style.color = "hsl(0, 0%, 41%)";
     companyLink.querySelector("a").style.color = "hsl(0, 0%, 41%)";
     // featuresDropdown.style.display = "none";
-    companyDropdown.style.display = "none";
+    // companyDropdown.style.display = "none";
     featuresDropdown.classList.add("hidden");
     companyDropdown.classList.add("hidden");
     featuresCaret.classList.remove("rotate");
