@@ -89,6 +89,17 @@ featuresLink.addEventListener("touchstart", function () {
   }
 });
 
+companyLink.addEventListener("touchstart", function () {
+  if (companyDropdown.style.display !== "none") {
+    companyDropdown.style.display = "none";
+    companyCaret.classList.remove("rotate");
+    this.closest(".nav-link").style.paddingBottom = "12px";
+  } else {
+    companyDropdown.style.display = "flex";
+    companyCaret.classList.add("rotate");
+  }
+});
+
 featuresDropdown.addEventListener("mouseenter", function () {
   featuresLink.querySelector("a").style.color = "hsl(0, 0%, 8%)";
 });
