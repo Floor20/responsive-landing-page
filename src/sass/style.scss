@@ -139,19 +139,6 @@ nav {
   column-gap: 15px;
 }
 
-// .nav-link:hover {
-//   // padding-bottom: 0px;
-
-//   .dropdown-features,
-//   .dropdown-company {
-//     display: flex;
-//   }
-
-//   .dropdown-company {
-//     flex-direction: column;
-//   }
-// }
-
 .login-links {
   display: flex;
   list-style-type: none;
@@ -285,12 +272,6 @@ figure {
 .even-padding {
   padding-bottom: 0px;
 }
-
-// .mobile-menu-icon a {
-//   height: 25px;
-//   width: 30px;
-//   display: inline-block;
-// }
 
 /* ---------------------------------------------- */
 /* QUERIES */
@@ -443,25 +424,6 @@ figure {
     font-size: 14px;
   }
 
-  // .nav-link:hover {
-  //   // padding-bottom: 0px;
-
-  //   .dropdown-features,
-  //   .dropdown-company {
-  //     display: flex;
-  //   }
-
-  //   .dropdown-company {
-  //     flex-direction: column;
-  //   }
-  // }
-
-  // .nav-link:hover {
-  //   .features-link {
-  //     display: none !important;
-  //   }
-  // }
-
   .login-links {
     display: flex;
     list-style-type: none;
@@ -469,7 +431,6 @@ figure {
 
   .nav-link:not(:last-child) {
     margin-right: 0px;
-    // padding: 12px;
   }
 
   .login-links,
